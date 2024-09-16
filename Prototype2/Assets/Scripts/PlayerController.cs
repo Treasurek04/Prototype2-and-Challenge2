@@ -5,19 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0ft;
-    public float xRange = 14;
+    public float speed = 10.0f;
+    private float xRange = 14;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+  
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horiontal");
+        horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
