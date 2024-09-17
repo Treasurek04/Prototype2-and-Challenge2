@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SpawnManagerX : MonoBehaviour
 {
-    public GameObject[] ballPrefabs;  
+    public GameObject[] ballPrefabs;
+    public DisplayScore displayScore;
+    public bool gameOver = false; 
 
     private float spawnLimitXLeft = -22;
     private float spawnLimitXRight = 7;
@@ -15,20 +17,41 @@ public class SpawnManagerX : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
+        StartCoroutine(SpawnRandomPrefabWithCoroutine());
+        displayScore = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<DisplayScore>();
+
+        //healthSystem = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
     }
+
+    IEnumerator SpawnRandomPrefabWithCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+
+        while (!gameOver)
+        {
+
+            SpawnRandomBall();
+            float randomDelay = Random.Range(3.0f, 5.0f);
+            yield return new WaitForSeconds(randomDelay);
+        }
+    }
+
+
 
     void SpawnRandomBall()
     {
-        if (ballPrefabs.Length == 0)
+        if (!gameOver) 
         {
-            Debug.LogError("Ball prefabs array is empty. Please assign ball prefabs in the Inspector.");
-            return;
+            Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
+            
+            int ballIndex = Random.Range(0, ballPrefabs.Length);
+
+            Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
         }
 
-        int randomIndex = Random.Range(0, ballPrefabs.Length);  // Get a random index
-        Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
+        
 
-        Instantiate(ballPrefabs[randomIndex], spawnPos, Quaternion.identity);  // Spawn the ball
+
     }
 }
+
