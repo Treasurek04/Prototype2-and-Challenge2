@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Challenge 2
+Controls for player 
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

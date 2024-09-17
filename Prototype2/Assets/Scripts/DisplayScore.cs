@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Prototype 2
+Display score 
+
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

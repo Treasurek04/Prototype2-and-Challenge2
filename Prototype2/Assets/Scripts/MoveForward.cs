@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Prototype 2
+move animals and player forward
+
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

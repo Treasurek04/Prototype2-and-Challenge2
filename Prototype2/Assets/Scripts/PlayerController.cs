@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Prototype 2
+Controls for player
+
+ */using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

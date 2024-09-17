@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Challenge 2
+Detect if ball collisions with dog 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Challenge 2
+Display score 
+
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

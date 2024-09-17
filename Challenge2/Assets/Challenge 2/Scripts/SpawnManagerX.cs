@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Challenge 2
+Spawn balls random and slow dog spawn
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,7 +39,6 @@ public class SpawnManagerX : MonoBehaviour
 
         while (!gameOver)
         {
-
             SpawnRandomBall();
             float randomDelay = Random.Range(3.0f, 5.0f);
             yield return new WaitForSeconds(randomDelay);
@@ -52,9 +57,6 @@ public class SpawnManagerX : MonoBehaviour
 
             Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
         }
-
-        
-
 
     }
 }

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys
+Prototype 2 
+Shoot prefab
+
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
