@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManager;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -58,7 +58,7 @@ public class HealthSystem : MonoBehaviour
             //Press R to restart if game is over
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManagement.SceneManager.LoadScene(SceneManagement.SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 

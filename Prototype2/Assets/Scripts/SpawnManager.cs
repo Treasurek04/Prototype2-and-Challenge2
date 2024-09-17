@@ -10,27 +10,34 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 20;
     public bool gameOver = false;
 
-    public HealthSystem healthSystem;
+    private HealthSystem healthSystemScript;
 
     void Start()
     {
-        healthSystem = gameOverObject.FindGameObjectWithTag("HealthSystem").GetCompenent<healthSystem>();
         if (prefabsToSpawn.Length == 0)
         {
             Debug.LogError("PrefabsToSpawn array is empty. Please assign prefabs in the Inspector.");
             return;
         }
+
+        healthSystemScript = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
+
+        if (healthSystemScript == null)
+        {
+            Debug.LogError("HealthSystem script not found. Please ensure there is a GameObject with the 'HealthSystem' tag and the HealthSystem script attached.");
+            return;
+        }
+
         StartCoroutine(SpawnPrefabsWithCooldown());
     }
 
     IEnumerator SpawnPrefabsWithCooldown()
     {
-        while (!healthSystem.gameOver)
+        while (!healthSystemScript.gameOver)
         {
             SpawnRandomPrefab();
             float randomDelay = Random.Range(1.5f, 3.0f);
-
-            yield return new WaitForSeconds(3f); // Wait for 3 seconds between spawns
+            yield return new WaitForSeconds(randomDelay);
         }
     }
 
