@@ -8,7 +8,7 @@ public class DetectCollisionsX : MonoBehaviour
 
     private void Start()
     {
-        displayScoreScript = GameObject.FindGameObjectWithTag("DiplayScoreText").GetComponent<DisplayScore>(); 
+        displayScoreScript = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<DisplayScore>(); 
     }
 
     private void OnTriggerEnter(Collider other)

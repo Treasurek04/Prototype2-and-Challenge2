@@ -6,6 +6,8 @@ public class SpawnManagerX : MonoBehaviour
 {
     public GameObject[] ballPrefabs;
     public DisplayScore displayScore;
+    public HealthSystem healthSystem;
+
     public bool gameOver = false; 
 
     private float spawnLimitXLeft = -22;
@@ -15,12 +17,14 @@ public class SpawnManagerX : MonoBehaviour
     private float startDelay = 1.0f;
     private float spawnInterval = 4.0f;
 
+
     void Start()
     {
         StartCoroutine(SpawnRandomPrefabWithCoroutine());
+
         displayScore = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<DisplayScore>();
 
-        //healthSystem = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
+        healthSystem = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
     }
 
     IEnumerator SpawnRandomPrefabWithCoroutine()

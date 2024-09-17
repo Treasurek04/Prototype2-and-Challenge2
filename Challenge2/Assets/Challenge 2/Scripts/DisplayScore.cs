@@ -20,7 +20,7 @@ public class DisplayScore : MonoBehaviour
 
     void Update()
     {
-        textbox.text = "Score: 0" + score++;
+        textbox.text = "Score: " + score;
 
         if (score >= 5)
         {
