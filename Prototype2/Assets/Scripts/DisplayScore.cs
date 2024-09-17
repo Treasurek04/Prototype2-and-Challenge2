@@ -8,16 +8,28 @@ public class DisplayScore : MonoBehaviour
     public Text textbox;
     public int score = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        textbox = GetComponent<textbox>();
-        textbox.text = "Score: 0";
+        if (textbox == null)
+        {
+            textbox = GetComponent<Text>();
+        }
+
+        if (textbox != null)
+        {
+            textbox.text = "Score: 0";
+        }
+        else
+        {
+            Debug.LogError("Textbox is not assigned and was not found on the GameObject.");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        textbox.text = "Score: " + score;
+        if (textbox != null)
+        {
+            textbox.text = "Score: " + score;
+        }
     }
 }
