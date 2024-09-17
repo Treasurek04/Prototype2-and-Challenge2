@@ -11,6 +11,7 @@ public class DestroyOutOfBoundsX : MonoBehaviour
 
     void Start()
     {
+
         healthSystemScript = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>();
     }
 
