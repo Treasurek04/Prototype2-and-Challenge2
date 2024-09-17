@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 284048269728249982}
   - component: {fileID: 8919441975506732170}
   - component: {fileID: 3507698880835313463}
-  - component: {fileID: 114087812699654720}
+  - component: {fileID: 350767711613169561}
+  - component: {fileID: 1127359872512386665}
+  - component: {fileID: 7374414854840173403}
   m_Layer: 0
   m_Name: Food_Organic_Apple_03
   m_TagString: Untagged
@@ -109,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114087812699654720
+--- !u!114 &350767711613169561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,6 +120,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 284048269726017352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc8ec846b2091940b63395141dfbaf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 68e4e0bde482de548bb761202f5e44bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1127359872512386665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284048269726017352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2fce2f5aa973b4c9d9a09eefea336c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBound: 20
+  bottomBound: -10
+--- !u!114 &7374414854840173403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284048269726017352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e61e0f0c5fb934292226804920643c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
