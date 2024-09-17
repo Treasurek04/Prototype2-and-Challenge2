@@ -521,9 +521,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903221260659215224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.35, y: 0, z: 20}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -6.4, y: 0, z: 9.8}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 903221260659036452}
   - {fileID: 903221260659008188}
@@ -533,7 +533,7 @@ Transform:
   - {fileID: 903221260658950606}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &903221260668830128
 Animator:
   serializedVersion: 3
@@ -564,8 +564,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 21.348267, y: 31.917747, z: 55.865215}
+  m_Center: {x: 0.63926697, y: 15.458872, z: 2.095921}
 --- !u!114 &114322657499628204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e61e0f0c5fb934292226804920643c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
 --- !u!1 &903221260659217186
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +909,6 @@ GameObject:
   m_Component:
   - component: {fileID: 903221260658992702}
   - component: {fileID: 903221260672827498}
-  - component: {fileID: 903221259238545104}
   m_Layer: 0
   m_Name: SA_Animal_Horse_Brown
   m_TagString: Untagged
@@ -1020,19 +1019,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: -0.8832464, z: 11.784651}
     m_Extent: {x: 5.571748, y: 18.315586, z: 21.710882}
   m_DirtyAABB: 0
---- !u!65 &903221259238545104
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903221260659236388}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.143496, y: 37.27602, z: 43.421764}
-  m_Center: {x: 0, y: 18.638004, z: 4.3370914}
 --- !u!1 &903221260659237836
 GameObject:
   m_ObjectHideFlags: 0

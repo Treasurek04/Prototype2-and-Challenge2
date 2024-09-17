@@ -10,26 +10,13 @@ public class DisplayScore : MonoBehaviour
 
     void Start()
     {
-        if (textbox == null)
-        {
-            textbox = GetComponent<Text>();
-        }
-
-        if (textbox != null)
-        {
-            textbox.text = "Score: 0";
-        }
-        else
-        {
-            Debug.LogError("Textbox is not assigned and was not found on the GameObject.");
-        }
+        textbox = GetComponent<Text>();
+        textbox.text = "Score: 0";
     }
 
     void Update()
     {
-        if (textbox != null)
-        {
-            textbox.text = "Score: " + score;
-        }
+        textbox.text = "Score: " + score;
+        
     }
 }
