@@ -35,11 +35,12 @@ public class SpawnManagerX : MonoBehaviour
 
     IEnumerator SpawnRandomPrefabWithCoroutine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(startDelay);
 
         while (!gameOver)
         {
             SpawnRandomBall();
+
             float randomDelay = Random.Range(3.0f, 5.0f);
             yield return new WaitForSeconds(randomDelay);
         }

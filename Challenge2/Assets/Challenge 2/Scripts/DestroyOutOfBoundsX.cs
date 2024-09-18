@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class DestroyOutOfBoundsX : MonoBehaviour
 {
-    private float leftLimit = 40;
+    private float leftLimit = -40;
     private float bottomLimit = -3;
 
     private HealthSystem healthSystemScript;
